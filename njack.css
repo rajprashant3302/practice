@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+
+}
+
+nav {
+
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    justify-content: flex-start;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    gap: 230px;
+
+    align-items: center;
+}
+
+nav div span {
+    font-size: 30px;
+}
+
+nav ul {
+    display: flex;
+    width: 48vw;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px 30px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 3px 10px;
+}
+
+nav ul li a:hover {
+    border: 1px solid white;
+    border-radius: 18px;
+    background-color: white;
+    color: black;
+
+}
+
+section {
+
+
+    width: 100%;
+
+
+
+}
+
+.hero,
+.about-section,
+.strengths-section,
+.call-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 22px;
+
+}
+
+.hero,
+.about-section,
+.call-section {
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.typewriter {
+    font-family: monospace;
+    overflow: hidden;
+    /* border-right: 0.15em solid #fff; */
+    white-space: nowrap;
+    width: 0;
+    animation: typing 10s steps(25, end) infinite;
+    position: relative;
+}
+
+/* Typing animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    60% {
+        width: 25ch;
+    }
+
+    100% {
+        width: 25ch;
+    }
+}
+
+/* Gradient mask over the word "World!" */
+.typewriter::after {
+    content: 'Embrace the ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+}
+
+.typewriter {
+    background-color: #fce055;
+    background-image: linear-gradient(319deg, #fce055 0%, #4d4dff 37%, #6050dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+
+}
+
+.dark-btn {
+    margin: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 20px;
+    background: transparent;
+    color: #e7e7e7;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dark-btn:hover {
+    background: #e7e7e7;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+
+
+
+/* About section */
+
+
+
+.about-section h2 {
+    font-size: 2.5rem;
+
+    width: 60vw;
+    text-align: center;
+}
+
+.about-section h3 {
+    font-size: 2.5rem;
+
+    width: 60vw;
+    text-align: center;
+}
+
+.about-section p {
+    width: 80vw;
+    padding: 20px;
+}
+
+
+
+/* strenths section */
+.strengths-section h2 {
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: center;
+
+    transform: translateY(20px);
+}
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: center;
+    ;
+
+}
+
+.card {
+
+    width: 40vw;
+    border: 1px solid white;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(255, 255, 255, 0.05);
+
+    transition: box-shadow 0.3s ease;
+
+}
+
+.card:hover {
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(255, 255, 255, 0.2),
+        0 0 45px rgba(255, 255, 255, 0.1);
+}
+
+/*  */
+/* call section */
+
+.call-section h2 {
+    font-size: 5rem;
+
+}
+
+.call-section p {
+    font-size: 1.2rem;
+}
+
+.map-timeline {
+    position: relative;
+    list-style: none;
+    padding-left: 50px;
+    margin: 3rem 0;
+}
+
+.map-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #666, #aaa);
+}
+
+.map-timeline li {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #e7e7e7;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.map-timeline li::before {
+    content: attr(data-step);
+    position: absolute;
+    top: 50%;
+    left: -29px;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    background: #fce055;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(252, 224, 85, 0.7);
+}
+
+.map-timeline li:last-child {
+    margin-bottom: 0;
+}
+
+.map-timeline li:last-child::after {
+    content: '';
+    display: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/*  */
+/* footer */
+
+footer {
+    background-color: #484848;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+
+
+/* media-queries */
+
+@media (max-width: 1024px) {
+    nav {
+        padding-left: 20px;
+        padding-right: 30px;
+        gap: 100px;
+    }
+
+    nav ul {
+        width: auto;
+        gap: 2rem;
+        padding: 8px 20px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .about-section h2,
+    .about-section h3 {
+        font-size: 2rem;
+        width: 80vw;
+    }
+
+    .strengths-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .call-section h2 {
+        font-size: 3.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .about-section h2,
+    .about-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-section p {
+        width: 90vw;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .card {
+        min-width: 80vw;
+        max-width: 90vw;
+        margin: 10px;
+    }
+
+    .call-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 5px 10px;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .about-section h2,
+    .about-section h3 {
+        font-size: 1.5rem;
+        width: 90vw;
+    }
+
+    .about-section p {
+        width: 95vw;
+        padding: 8px;
+        margin-top: 8px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .call-section h2 {
+        font-size: 2rem;
+    }
+
+    .call-section p {
+        font-size: 1rem;
+    }
+
+    .map-timeline {
+        padding-left: 30px;
+    }
+
+    .map-timeline::before {
+        left: 10px;
+    }
+
+    .map-timeline li::before {
+        width: 22px;
+        height: 22px;
+        left: -20px;
+        font-size: 0.7rem;
+    }
+}
